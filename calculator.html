@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+<style>
+body {
+  background-color: greenyellow;
+}
+ {
+  font-family: sans-serif;
+}
+
+input {
+  width: 100px;
+  margin: 5px;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Simple Calculator</h1>
+<input type="number" id="firstNumber">
+<input type="number" id="secondNumber">
+<button id="add">Add</button>
+<button id="subtract">Subtract</button>
+<button id="multiply">Multiply</button>
+<button id="divide">Divide</button>
+<p id="output"></p>
+
+<script>
+function add() {
+  var firstNumber = parseInt(document.getElementById("firstNumber").value);
+  var secondNumber = parseInt(document.getElementById("secondNumber").value);
+  var output = firstNumber + secondNumber;
+  document.getElementById("output").innerHTML = output;
+}
+
+function subtract() {
+  var firstNumber = document.getElementById("firstNumber").value;
+  var secondNumber = document.getElementById("secondNumber").value;
+  var output = firstNumber - secondNumber;
+  document.getElementById("output").innerHTML = output;
+}
+
+function multiply() {
+  var firstNumber = document.getElementById("firstNumber").value;
+  var secondNumber = document.getElementById("secondNumber").value;
+  var output = firstNumber * secondNumber;
+  document.getElementById("output").innerHTML = output;
+}
+
+function divide() {
+  var firstNumber = document.getElementById("firstNumber").value;
+  var secondNumber = document.getElementById("secondNumber").value;
+  var output = firstNumber / secondNumber;
+  document.getElementById("output").innerHTML = output;
+}
+
+document.getElementById("add").onclick = add;
+document.getElementById("subtract").onclick = subtract;
+document.getElementById("multiply").onclick = multiply;
+document.getElementById("divide").onclick = divide;
+</script>
+</body>
+</html>
